@@ -1,0 +1,20 @@
+{ 
+    "origen":"MAD",
+    "destino": "CPH",
+    "solo_ida": "false",
+    "info_ida": 
+    {
+        "dia": "2021-04-01",
+        "hora": "12.15",
+        "duracion": "3.05",
+        "terminal": "T4"
+    },
+
+    " info_vuelta": 
+    {
+        "dia": "2021-04-15",
+        "hora": "22.15",
+        "duracion": "3.05",
+        "terminal": "T4"
+    }
+}

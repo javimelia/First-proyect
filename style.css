@@ -1,0 +1,67 @@
+body, input, button {
+    font-size: 30px;
+}
+
+body {
+    margin-bottom: 1000px;
+}
+
+p {
+    font-weight:bold;
+    text-decoration-line:underline;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+::-webkit-input-placeholder{
+    font-size: 15px;
+}
+
+input, button {
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    width: 175px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px;
+}
+
+.ejercicio {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.ejArray {
+    margin-left: 50px;
+    display:flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.array {
+    font-size: 22px;
+}
+
+.resultado {
+    font-weight:bold;
+}
+
+.resultadoArray {
+    font-size: 22px;
+    font-weight:bold;
+}
+
+.form {
+    margin-bottom: 30px;
+}

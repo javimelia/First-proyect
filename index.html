@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Ejercicio1">
+        <p>Ejercicio 1 - Compara tu edad:</p>
+        <form class="ejercicio" onsubmit="f1();return false">
+            <input type="number" class=edad1 id=edad1 required placeholder="Edad Fernando Simón">
+            <input type="number" id=edad2 required placeholder="Indica tu edad">
+            <input type="submit"/>
+            <div class="resultado" id="resultado1"></div>
+        </form>
+    </div>
+
+    <div class="Ejercicio2">
+        <p>Ejercicio 2 - ¿Par o impar?:</p>
+        <form class="ejercicio" onsubmit="f2();return false">
+            <input type="number" id=ej2 required placeholder="Indica un número">
+            <input type="submit"/>
+            <div class="resultado" id="resultado2"></div>
+        </form>
+    </div>
+
+    <div class="Ejercicio3">
+        <p>Ejercicio 3 - Mostrar solo los múltiplos de 3:</p>
+        <div class="ejArray">
+            <div class="array" id="array3"></div>
+            <button type="button" onclick="f3();return false">Mostrar en la consola</button>
+            <div class="resultado" id="resultado3"></div>
+        </div>
+    </div>
+
+    <div class="Ejercicio4">
+        <p>Ejercicio 4 - Mostrar el número menor:</p>
+        <div class="ejArray">
+            <div class="array" id="array4"></div>
+            <button type="button" onclick="f4();return false">Calcular</button>
+            <div class="resultado" id="resultado4"></div>
+        </div>
+    </div> 
+
+    <div class="Ejercicio5">
+        <p>Ejercicio 5 - Mostrar el número mayor:</p>
+        <div class="ejArray">
+            <div class="array" id="array5"></div>
+            <button type="button" onclick="f5();return false">Calcular</button>
+            <div class="resultado" id="resultado5"></div>
+        </div>
+    </div> 
+
+    <div class="Ejercicio6">
+        <p>Ejercicio 6 - Mostrar los repetidos:</p>
+        <div class="ejArray">
+            <div class="array" id="array6"></div>
+            <button type="button" onclick="f6yf7s();return false">Mostrar</button>
+            <div class="resultado" id="resultado6"></div>
+        </div>
+    </div>
+
+    <div class="Ejercicio7">
+        <p>Ejercicio 7 - Eliminar los números pares:</p>
+        <div class="ejArray">
+            <div class="array" id="array7"></div>
+            <button type="button" onclick="f7();return false">Mostrar</button>
+            <div class="resultado" id="resultado7"></div>
+        </div>
+    </div>
+
+    <div class="Ejercicio8">
+        <p>Ejercicio 8 - Lanzar 2 dados 36.000 veces:</p>
+        <div class="ejArray">
+            <div class="array" id="array8"></div>
+            <button type="button" onclick="f8();return false">Mostrar</button>
+            <div class="resultado" id="resultado8"></div>
+        </div>
+    </div>
+
+    <div class="Ejercicio9">
+        <p>Ejercicio 9 - Promedio de los lanzamientos:</p>
+        <div class="ejArray">
+            <div class="array" id="array9"></div>
+            <button type="button" onclick="f9();return false">Mostrar</button>
+            <div class="resultado" id="resultado9"></div>
+        </div>
+    </div>
+
+    <div class="Ejercicio10">
+        <p>Ejercicio 10 - Ordenar y añadir un número:</p>
+        <div class="ejArray">
+            
+            <button type="button" onclick="f10ord();return false">Ordenar</button>
+            <button type="button" onclick="f10des();return false">Desordenar</button>
+            <div class="array" id="array10"></div>
+
+            <form onsubmit="f10añadir();return false">
+                <input type="number" id="numero" required placeholder="Añadir número">
+                <input type="submit" id="enviar" disabled="true" ></input>
+            </form>
+
+            <div class="resultado" id="resultado10"></div>
+            <button type="button" onclick="f10reset();return false">Reestablecer</button>
+
+        </div>
+    </div>
+
+
+    <script src="exercises-js.js"></script>
+</body>
+</html>
