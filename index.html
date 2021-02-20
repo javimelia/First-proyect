@@ -92,21 +92,22 @@
 
     <div class="Ejercicio10">
         <p>Ejercicio 10 - Ordenar y añadir un número:</p>
-        <div class="ejArray">
+        <div class="ej10">
             
             <button type="button" id="ordenar" onclick="f10ord();return false">Ordenar</button>
-            <button type="button" id="desordenar" disabled="true" onclick="f10des();return false">Desordenar</button>
-            <div class="array" id="array10"></div>
-
+            <button type="button" class= "desord" id="desordenar" disabled="true" onclick="f10des();return false">Desordenar</button>
+            
             <form onsubmit="f10añadir();return false">
                 <input type="number" id="numero" required placeholder="Añadir número">
-                <input type="submit" id="enviar" disabled="true" ></input>
+                <input type="submit" class="env" id="enviar" ></input>
             </form>
 
-            <div class="resultado" id="resultado10"></div>
-            <button type="button" onclick="f10reset();return false">Reset</button>
-
+            <button type="button" id="reset" disabled="true" onclick="f10reset();return false">Reset</button>
         </div>
+        
+        <p class="p_ej10">Array:</p>
+        <div class="array10" id="array10"></div>
+
     </div>
 
     

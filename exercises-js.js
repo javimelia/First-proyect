@@ -186,9 +186,11 @@ function f9(){
 //Array.from(), sort(), splice(), for(), if()
 
 var num3esp = num3.join(", ");
-document.getElementById("array10").innerHTML= "Array: [" + num3esp + "]";
+document.getElementById("array10").innerHTML= "[" + num3esp + "]";
 
 var copia = Array.from(num3)
+
+var orden = false
 
 function f10ord () {
 
@@ -200,17 +202,34 @@ function f10ord () {
     enviar.disabled = false;
     desordenar.disabled = false;
     ordenar.disabled = true;
+    reset.disabled= false;
 
+    orden = true
 
     let copiaesp = copia.join(", ");
-    document.getElementById("array10").innerHTML= "Array: [" + copiaesp + "]";
+    document.getElementById("array10").innerHTML= "[" + copiaesp + "]";
 }
 
+
 function f10des () {
-    enviar.disabled = true;
+
+    var x = Math.floor(Math.random() * (copia.length - 0 + 1) + 0);
+    
+    for (var i = copia.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = copia[i];
+        copia[i] = copia[j];
+        copia[j] = temp;
+    }
+
+    let copiaesp = copia.join(", ");
+    document.getElementById("array10").innerHTML= "[" + copiaesp + "]"; 
+
+    orden = false
+
     ordenar.disabled = false;
     desordenar.disabled = true;
-    document.getElementById("array10").innerHTML= "Array: [" + num3esp + "]";
+    reset.disabled= false;
 }
 
 function f10añadir () {
@@ -218,10 +237,14 @@ function f10añadir () {
     var numerito = document.getElementById("numero").value
 
     if (numerito !== undefined) {
-        for(i=0; i < copia.length; i++) { 
-            if ((numerito - copia[i]) > 0) { 
-                var posicion = i + 1 
-            } 
+        if (orden == true) {
+            for(i=0; i < copia.length; i++) { 
+                if ((numerito - copia[i]) > 0) { 
+                    var posicion = i + 1 
+                } 
+            }
+        } else {
+            posicion = Math.floor(Math.random() * (copia.length - 0 + 1) + 0);
         }
     }
 
@@ -230,12 +253,17 @@ function f10añadir () {
     copia.splice (posicion, 0, numerito)
 
     let copiaesp = copia.join(", ");
-    document.getElementById("resultado10").innerHTML= "Array: [" + copiaesp + "]";
+    document.getElementById("array10").innerHTML= "[" + copiaesp + "]";
+
+    reset.disabled= false;
 }
 
 function f10reset () {
     f10des()
-    document.getElementById("resultado10").innerHTML= "";
+    reset.disabled= true;
+    document.getElementById("numero").value = "";
+    document.getElementById("array10").innerHTML= "[" + num3esp + "]";
+    copia = Array.from(num3)
 }
 
 
