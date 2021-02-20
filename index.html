@@ -94,8 +94,8 @@
         <p>Ejercicio 10 - Ordenar y añadir un número:</p>
         <div class="ejArray">
             
-            <button type="button" onclick="f10ord();return false">Ordenar</button>
-            <button type="button" onclick="f10des();return false">Desordenar</button>
+            <button type="button" id="ordenar" onclick="f10ord();return false">Ordenar</button>
+            <button type="button" id="desordenar" disabled="true" onclick="f10des();return false">Desordenar</button>
             <div class="array" id="array10"></div>
 
             <form onsubmit="f10añadir();return false">
@@ -104,12 +104,12 @@
             </form>
 
             <div class="resultado" id="resultado10"></div>
-            <button type="button" onclick="f10reset();return false">Reestablecer</button>
+            <button type="button" onclick="f10reset();return false">Reset</button>
 
         </div>
     </div>
 
-    <div>Cambio push</div>
+    
 
     <script src="exercises-js.js"></script>
 </body>
