@@ -198,6 +198,9 @@ function f10ord () {
     )
     
     enviar.disabled = false;
+    desordenar.disabled = false;
+    ordenar.disabled = true;
+
 
     let copiaesp = copia.join(", ");
     document.getElementById("array10").innerHTML= "Array: [" + copiaesp + "]";
@@ -205,6 +208,8 @@ function f10ord () {
 
 function f10des () {
     enviar.disabled = true;
+    ordenar.disabled = false;
+    desordenar.disabled = true;
     document.getElementById("array10").innerHTML= "Array: [" + num3esp + "]";
 }
 
@@ -229,7 +234,8 @@ function f10añadir () {
 }
 
 function f10reset () {
-    document.getElementById("resultado10").innerHTML= "Array: [" + copiaesp + "]";
+    f10des()
+    document.getElementById("resultado10").innerHTML= "";
 }
 
 
